@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="cruds">
+            <div class="head">
+                <h1>cruds</h1>
+                <p>product management system</p>
+            </div>
+            <div class="input">
+                <p class="warnMessage">please Enter all required data !!!</p>
+                <input type="title" id="title" placeholder="title" />
+                <div class="price">
+                    <input
+                        type="number"
+                        id="price"
+                        onkeyup=" getTotal()"
+                        placeholder="price"
+                    />
+                    <input
+                        type="number"
+                        id="taxes"
+                        onkeyup=" getTotal()"
+                        placeholder="taxes"
+                    />
+                    <input
+                        type="number"
+                        id="ads"
+                        onkeyup=" getTotal()"
+                        placeholder="ads"
+                    />
+                    <input
+                        type="number"
+                        id="discount"
+                        onkeyup=" getTotal()"
+                        placeholder="discount"
+                    />
+                    <small id="total"></small>
+                </div>
+                <input type="number" id="count" placeholder="count" />
+                <input type="text" id="category" placeholder="category" />
+                <button type="submit" id="create">Create</button>
+            </div>
+            <div class="output">
+                <input
+                    type="text"
+                    id="search"
+                    onkeyup="showData()"
+                    placeholder="Search by Title"
+                />
+                <div class="searchbox">
+                    <button class="btn" id="TitleBtn">Search by Title</button>
+                    <button class="btn" id="CategoryBtn">
+                        Search by Category
+                    </button>
+                </div>
+                <button id="deleteAll"></button>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>price</th>
+                        <th>TAXES</th>
+                        <th>ADS</th>
+                        <th>DISCOUNT</th>
+                        <th>TOTAL</th>
+                        <th>CATEGORY</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
